@@ -32,7 +32,7 @@ html {
     list-style: none;
     outline: none;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 li {

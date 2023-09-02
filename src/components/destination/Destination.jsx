@@ -4,7 +4,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import data from '../../data/data.json'
 import './destination.css'
 
-const destinations = data.destinations;
+const { destinations } = data;
 
 const Destination = () => {
   const [currentDestinationImage, setCurrentDestinationImage] = useState(destinations[0].images.png);
@@ -17,7 +17,7 @@ const Destination = () => {
   )
   return (
     <div className='py-6 px-4'>
-      <p className='text-heading-5 font-barlow-condensed text-white tracking-lg uppercase'><span className='opacity-25 mr-7'>01</span>pick your destination</p>
+      <p className='text-heading-5 font-barlow-condensed text-white tracking-lg uppercase'><span className='opacity-25 mr-7 font-bold'>01</span>pick your destination</p>
       <div className='flex pt-2 justify-around items-center '>
         <img
           className=' w-1/3 mt-8'

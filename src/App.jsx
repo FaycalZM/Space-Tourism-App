@@ -9,6 +9,7 @@ import NotFound from './components/NotFound'
 import Layout from './components/Layout'
 import { useData } from './context/DataProvider'
 import DestinationDetails from './components/destination/DestinationDetails'
+import CrewDetails from './components/crew/CrewDetails'
 
 
 function App() {
@@ -34,7 +35,10 @@ function App() {
             <Route index element={<DestinationDetails />} />
             <Route path=':destinationName' element={<DestinationDetails />} />
           </Route>
-          <Route path='/crew' element={<Crew />} />
+          <Route path='/crew' element={<Crew />}>
+            <Route index element={<CrewDetails />} />
+            <Route path=':crewMemberName' element={<CrewDetails />} />
+          </Route>
           <Route path='/technology' element={<Technology />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
