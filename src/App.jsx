@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <main className="min-h-screen max-h-screen bg-[url('/home/background-home-desktop.jpg')] bg-cover bg-center text-white">
+    <main className="min-h-screen bg-[url('/home/background-home-desktop.jpg')] bg-cover bg-center text-white">
       <Header />
       <Layout>
         <Routes>
