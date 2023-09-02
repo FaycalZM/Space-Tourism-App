@@ -41,7 +41,7 @@ export default {
         'technology-mobile': "url('/technology/background-technology-mobile.jpg')",
       },
       screens: {
-        'desktop': '1366px',
+        'desktop': '1280px',
         'tablet': '768px'
       }
     },

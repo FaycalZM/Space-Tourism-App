@@ -14,9 +14,9 @@ const Home = () => {
     }, []
   )
   return (
-    <div className="flex justify-around py-32">
+    <div className="flex desktop:flex-row tablet:flex-col justify-around py-32 tablet:items-center desktop:items-start text-center">
       <div className='w-min'>
-        <p className='text-heading-5 font-barlow-condensed text-very-light-grayish-blue tracking-lg uppercase'>so, you want to travel to</p>
+        <p className='desktop:text-heading-5 text-[20px] font-barlow-condensed text-very-light-grayish-blue desktop:tracking-lg tracking-[3.375px] uppercase'>so, you want to travel to</p>
         <p className='text-heading-1 font-bellefair uppercase'>space</p>
         <p className='text-body-text/8 font-barlow text-very-light-grayish-blue'>
           Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover

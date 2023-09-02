@@ -25,8 +25,9 @@ function App() {
         '--mobile-image-url': `url('${backgroundImage}-mobile.jpg')`,
 
       }}
-      className={`main-page min-h-screen text-white
-          desktop:bg-[image:var(--desktop-image-url)] tablet:bg-[image:var(--tablet-image-url)] bg-cover bg-center`}>
+      className={`main-page min-h-screen text-white bg-cover bg-center
+            desktop:bg-[image:var(--desktop-image-url)]
+            tablet:bg-[image:var(--tablet-image-url)] `}>
       <Header />
       <Layout>
         <Routes>
