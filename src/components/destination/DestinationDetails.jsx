@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import data from '../../data/data.json'
+import { useOutletContext } from 'react-router'
 
 const DestinationDetails = () => {
   const { destinationName } = useParams();
-  const currentDestination = data.destinations.filter(destination => destination.name === destinationName)[0];
-
+  const currentDestination = typeof destinationName === 'undefined' ? data.destinations[0] : data.destinations.filter(destination => destination.name === destinationName)[0];
+  const [setCurrentDestinationImage] = useOutletContext();
+  useEffect(
+    () => {
+      setCurrentDestinationImage(currentDestination.images.png);
+    }, [currentDestination]
+  )
   return (
     <>
       <p className='text-heading-2 font-bellefair uppercase mt-2'>{currentDestination ? currentDestination.name : null} </p>

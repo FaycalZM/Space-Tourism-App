@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { useData } from '../../context/DataProvider';
-import { NavLink, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import data from '../../data/data.json'
 import './destination.css'
 
 const destinations = data.destinations;
 
 const Destination = () => {
-  const [currentDestination, setCurrentDestination] = useState(destinations[0]);
+  const [currentDestinationImage, setCurrentDestinationImage] = useState(destinations[0].images.png);
   const { changeMainPageBackground } = useData();
-  const navigate = useNavigate();
-
 
   useEffect(
     () => {
-      navigate('/destination/Moon');
       changeMainPageBackground('/destination/background-destination');
     }, []
   )
@@ -24,19 +21,16 @@ const Destination = () => {
       <div className='flex pt-2 justify-around items-center '>
         <img
           className=' w-1/3 mt-8'
-          src={currentDestination.images.png}
-          alt={`${currentDestination.name}_image`} />
+          src={currentDestinationImage}
+          alt={`destination_image`} />
         <div className='w-1/3 '>
           <nav className='font-barlow-condensed text-nav-text tracking-md px-1'>
             <ul className='flex gap-9 '>
               {
                 destinations.map((destination, index) => {
                   return <NavLink
-                    onClick={() => {
-                      setCurrentDestination(destinations.filter(dest => dest.name === destination.name)[0])
-                    }}
                     to={`/destination/${destination.name}`}
-                    className='secondary-nav-link py-2 text-very-light-grayish-blue uppercase'
+                    className={`secondary-nav-link py-2 text-very-light-grayish-blue uppercase`}
                     activeclassname='active'
                     key={index}>
                     {destination.name}
@@ -45,7 +39,7 @@ const Destination = () => {
               }
             </ul>
           </nav>
-          <Outlet />
+          <Outlet context={[setCurrentDestinationImage]} />
         </div>
       </div>
     </div>
