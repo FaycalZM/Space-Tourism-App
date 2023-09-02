@@ -7,11 +7,11 @@ const { destinations } = data;
 
 const DestinationDetails = () => {
   const { destinationName } = useParams();
-  const currentDestination = typeof destinationName === 'undefined' ? destinations[0] : destinations.filter(destination => destination.name === destinationName)[0];
+  const currentDestination = destinations.filter(destination => destination.name === destinationName)[0];
   const [setCurrentDestinationImage] = useOutletContext();
   useEffect(
     () => {
-      setCurrentDestinationImage(currentDestination.images.png);
+      setCurrentDestinationImage(currentDestination ? currentDestination.images.png : null);
     }, [currentDestination]
   )
   return (

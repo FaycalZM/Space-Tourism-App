@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import './App.css'
 import Header from './components/header/Header'
 import Home from './components/home/Home'
@@ -10,6 +10,7 @@ import Layout from './components/Layout'
 import { useData } from './context/DataProvider'
 import DestinationDetails from './components/destination/DestinationDetails'
 import CrewDetails from './components/crew/CrewDetails'
+import TechnologyDetails from './components/technology/TechnologyDetails'
 
 
 function App() {
@@ -32,14 +33,20 @@ function App() {
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/destination' element={<Destination />}>
-            <Route index element={<DestinationDetails />} />
+            <Route index element={<Navigate replace to='/destination/Moon' />} />
             <Route path=':destinationName' element={<DestinationDetails />} />
+            <Route path='*' element={<NotFound />} />
           </Route>
           <Route path='/crew' element={<Crew />}>
-            <Route index element={<CrewDetails />} />
+            <Route index element={<Navigate replace to='/crew/Douglas Hurley' />} />
             <Route path=':crewMemberName' element={<CrewDetails />} />
+            <Route path='*' element={<NotFound />} />
           </Route>
-          <Route path='/technology' element={<Technology />} />
+          <Route path='/technology' element={<Technology />} >
+            <Route index element={<Navigate replace to='/technology/Launch vehicle' />} />
+            <Route path=':technologyName' element={<TechnologyDetails />} />
+            <Route path='*' element={<NotFound />} />
+          </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Layout>

@@ -1,0 +1,4 @@
+.tech-nav-link.active {
+    background: white;
+    color: var(--clr-dark-blue);
+}

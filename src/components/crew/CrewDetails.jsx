@@ -7,20 +7,20 @@ const { crew } = data;
 
 const CrewDetails = () => {
   const { crewMemberName } = useParams();
-  const currentCrewMember = typeof crewMemberName === 'undefined' ? crew[0] : crew.filter(member => member.name === crewMemberName)[0];
+  const currentCrewMember = crew.filter(member => member.name === crewMemberName)[0];
   const [setCurrentCrewImage] = useOutletContext();
 
   useEffect(
     () => {
-      setCurrentCrewImage(currentCrewMember.images.png);
+      setCurrentCrewImage(currentCrewMember ? currentCrewMember.images.png : null);
     }, [currentCrewMember]
   )
   return (
     <div>
-      <p className='text-heading-4 font-bellefair uppercase opacity-[0.5042] '>{currentCrewMember.name} </p>
-      <p className='text-heading-3 font-bellefair uppercase'>{currentCrewMember.role} </p>
+      <p className='text-heading-4 font-bellefair uppercase opacity-[0.5042] '>{currentCrewMember ? currentCrewMember.name : null} </p>
+      <p className='text-heading-3 font-bellefair uppercase'>{currentCrewMember ? currentCrewMember.role : null} </p>
       <p className='text-body-text/8 font-barlow text-very-light-grayish-blue pr-8 mt-6'>
-        {currentCrewMember.bio}
+        {currentCrewMember ? currentCrewMember.bio : null}
       </p>
     </div>
   )

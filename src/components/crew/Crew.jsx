@@ -19,7 +19,7 @@ const Crew = () => {
   return (
     <div className='py-6 px-4 h-full'>
       <p className='text-heading-5 font-barlow-condensed text-white tracking-lg uppercase'><span className='opacity-25 mr-7 font-bold'>02</span>meet your crew</p>
-      <div className='w-[40%]  flex flex-col justify-center h-full'>
+      <div className='w-[45%]  flex flex-col justify-center h-full'>
 
         <Outlet context={[setCurrentCrewImage]} />
 
