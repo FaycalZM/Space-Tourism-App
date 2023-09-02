@@ -24,3 +24,13 @@
     width: 100%;
     opacity: 1;
 }
+
+@media screen and (max-width : 767px) {
+    .nav-link::after {
+        display: none;
+    }
+
+    .active {
+        border-right: 4px solid white;
+    }
+}
