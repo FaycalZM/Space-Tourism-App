@@ -7,18 +7,33 @@ import Crew from './components/crew/Crew'
 import Technology from './components/technology/Technology'
 import NotFound from './components/NotFound'
 import Layout from './components/Layout'
+import { useData } from './context/DataProvider'
+import DestinationDetails from './components/destination/DestinationDetails'
 
 
 function App() {
 
+  const { backgroundImage } = useData();
 
   return (
-    <main className="min-h-screen bg-[url('/home/background-home-desktop.jpg')] bg-cover bg-center text-white">
+    <main
+      style={{
+        '--desktop-image-url': `url('${backgroundImage}-desktop.jpg')`,
+        '--tablet-image-url': `url('${backgroundImage}-tablet.jpg')`,
+        '--mobile-image-url': `url('${backgroundImage}-mobile.jpg')`,
+
+      }}
+      className={`main-page min-h-screen text-white
+          desktop:bg-[image:var(--desktop-image-url)] tablet:bg-[image:var(--tablet-image-url)] bg-cover bg-center`}>
       <Header />
       <Layout>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/destination' element={<Destination />} />
+          <Route index element={<Home />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/destination' element={<Destination />}>
+            <Route index element={<DestinationDetails />} />
+            <Route path=':destinationName' element={<DestinationDetails />} />
+          </Route>
           <Route path='/crew' element={<Crew />} />
           <Route path='/technology' element={<Technology />} />
           <Route path='*' element={<NotFound />} />

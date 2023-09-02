@@ -35,6 +35,10 @@ html {
     overflow-x: hidden;
 }
 
+li {
+    text-decoration: none;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }

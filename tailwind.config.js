@@ -25,6 +25,24 @@ export default {
         'subheading-2': '14px',
         'nav-text': '16px',
         'body-text': '18px'
+      },
+      backgroundImage: {
+        'home-desktop': "url('/home/background-home-desktop.jpg')",
+        'home-tablet': "url('/home/background-home-tablet.jpg')",
+        'home-mobile': "url('/home/background-home-mobile.jpg')",
+        'destination-desktop': "url('/destination/background-destination-desktop.jpg')",
+        'destination-tablet': "url('/destination/background-destination-tablet.jpg')",
+        'destination-mobile': "url('/destination/background-destination-mobile.jpg')",
+        'crew-desktop': "url('/crew/background-crew-desktop.jpg')",
+        'crew-tablet': "url('/crew/background-crew-tablet.jpg')",
+        'crew-mobile': "url('/crew/background-crew-mobile.jpg')",
+        'technology-desktop': "url('/technology/background-technology-desktop.jpg')",
+        'technology-tablet': "url('/technology/background-technology-tablet.jpg')",
+        'technology-mobile': "url('/technology/background-technology-mobile.jpg')",
+      },
+      screens: {
+        'desktop': '1366px',
+        'tablet': '768px'
       }
     },
     letterSpacing: {

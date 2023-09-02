@@ -7,10 +7,10 @@ const Header = () => {
     <header className='text-white font-barlow-condensed text-nav-text tracking-md flex items-center pl-12 w-full absolute top-12'>
       <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="24" r="24" fill="white" />
-        <path fill-rule="evenodd" clip-rule="evenodd"
+        <path fillRule="evenodd" clipRule="evenodd"
           d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17" />
       </svg>
-      <hr className='w-[38%] ml-10 z-10 opacity-[25.15%]' />
+      <hr className='w-[40%] ml-10 z-10 opacity-[0.2515]' />
       <nav className='w-[55%] backdrop-blur-[40.77px] bg-white bg-opacity-[4%] absolute right-0'>
         <ul className="flex justify-center items-center gap-16 h-full">
           <NavLink
