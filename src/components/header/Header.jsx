@@ -5,15 +5,14 @@ import Logo from '../icons/Logo'
 import HamburgerIcon from '../icons/HamburgerIcon'
 import CloseIcon from '../icons/CloseIcon'
 import { useData } from '../../context/DataProvider'
+import 'animate.css'
 
 const Header = () => {
   const { isMenuOpened, toggleMenu, closeMenu } = useData();
 
-
   return (
     <header className='text-white font-barlow-condensed text-nav-text tracking-md flex items-center pl-4 tablet:pl-6 desktop:pl-12 w-full absolute desktop:top-12 tablet:top-6'>
       <Logo />
-      <hr className='w-[38%] ml-10 z-10 opacity-[0.2515] desktop:block hidden' />
       <button
         onClick={toggleMenu}
         className='absolute right-6 top-7 scale-125 z-50 tablet:hidden'>

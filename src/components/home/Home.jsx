@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import './home.css'
 import { useNavigate } from 'react-router';
 import { useData } from '../../context/DataProvider';
+import 'animate.css'
+import './home.css'
 
 const Home = () => {
 
@@ -15,7 +17,7 @@ const Home = () => {
   )
   return (
     <div className="flex desktop:flex-row flex-col desktop:justify-around pt-32 tablet:h-auto h-full justify-center items-center desktop:items-start text-center ">
-      <div className='tablet:w-min'>
+      <div className='home-text tablet:w-min'>
         <p className='desktop:text-heading-5 tablet:text-[20px] text-base font-barlow-condensed text-very-light-grayish-blue desktop:tracking-lg tablet:tracking-[3.375px] tracking-md uppercase'>so, you want to travel to</p>
         <p className='tablet:text-heading-1 text-[80px] font-bellefair uppercase'>space</p>
         <p className='tablet:text-body-text/8 text-[15px]/7 font-barlow text-very-light-grayish-blue tablet:px-0 px-6'>
@@ -24,7 +26,7 @@ const Home = () => {
         </p>
       </div>
       <div className='w-fit'>
-        <div className='pointer-events-none float-right tablet:w-[450px] w-[246px] tablet:h-[450px] h-[246px] rounded-full bg-white bg-opacity-0 hover:bg-opacity-[0.1036] transition duration-300 ease-in flex justify-center items-center'>
+        <div className='explore-btn pointer-events-none float-right tablet:w-[450px] w-[246px] tablet:h-[450px] h-[246px] rounded-full bg-white bg-opacity-0 hover:bg-opacity-[0.1036] transition duration-300 ease-in flex justify-center items-center'>
           <button
             onClick={() => {
               navigate("/destination");
