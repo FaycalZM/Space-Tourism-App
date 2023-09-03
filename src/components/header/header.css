@@ -30,7 +30,7 @@
         display: none;
     }
 
-    .active {
+    .nav-link.active {
         border-right: 4px solid white;
     }
 }

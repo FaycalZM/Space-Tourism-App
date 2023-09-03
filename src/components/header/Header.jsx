@@ -4,13 +4,10 @@ import { NavLink } from 'react-router-dom'
 import Logo from '../icons/Logo'
 import HamburgerIcon from '../icons/HamburgerIcon'
 import CloseIcon from '../icons/CloseIcon'
+import { useData } from '../../context/DataProvider'
 
 const Header = () => {
-  const [isMenuOpened, setIsMenuOpened] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpened(prevState => !prevState);
-  }
+  const { isMenuOpened, toggleMenu, closeMenu } = useData();
 
 
   return (
@@ -19,16 +16,17 @@ const Header = () => {
       <hr className='w-[38%] ml-10 z-10 opacity-[0.2515] desktop:block hidden' />
       <button
         onClick={toggleMenu}
-        className='absolute right-6 top-7 scale-125 z-50'>
+        className='absolute right-6 top-7 scale-125 z-50 tablet:hidden'>
         {
           isMenuOpened ? <CloseIcon /> : <HamburgerIcon />
         }
       </button>
-      <nav className={`desktop:w-[55%] tablet:w-[65%] w-[70%] ${isMenuOpened ? '' : 'hidden'} h-screen tablet:pl-0 pl-8 tablet:h-auto backdrop-blur-[40.77px] bg-white desktop:bg-opacity-[0.04] bg-opacity-[0.03] absolute tablet:-top-6 top-0 right-0 z-20`}>
+      <nav className={`desktop:w-[55%] tablet:w-[65%] w-[70%] tablet:block ${isMenuOpened ? '' : 'hidden'} h-screen tablet:pl-0 pl-8 tablet:h-auto backdrop-blur-[40.77px] bg-white desktop:bg-opacity-[0.04] bg-opacity-[0.03] absolute tablet:-top-6 top-0 right-0 z-20`}>
         <ul className="flex tablet:flex-row flex-col tablet:justify-center justify-center tablet:items-center desktop:text-base text-[14px] desktop:tracking-sm tracking-md desktop:gap-16 tablet:gap-8 gap-6 tablet:h-full h-1/2 ">
           <NavLink
             to={'/'}
             activeclassname='active'
+            onClick={closeMenu}
             className='nav-link uppercase font-normal desktop:py-9 tablet:py-10 block tablet:h-full'>
             <span className='font-bold mr-3 desktop:inline tablet:hidden'>00</span>
             home
@@ -36,6 +34,7 @@ const Header = () => {
           <NavLink
             to={'/destination'}
             activeclassname='active'
+            onClick={closeMenu}
             className='nav-link uppercase font-normal desktop:py-9 tablet:py-10 block tablet:h-full'>
             <span className='font-bold mr-3 desktop:inline tablet:hidden'>01</span>
             destination
@@ -43,6 +42,7 @@ const Header = () => {
           <NavLink
             to={'/crew'}
             activeclassname='active'
+            onClick={closeMenu}
             className='nav-link uppercase font-normal desktop:py-9 tablet:py-10 block tablet:h-full'>
             <span className='font-bold mr-3 desktop:inline tablet:hidden'>02</span>
             crew
@@ -50,6 +50,7 @@ const Header = () => {
           <NavLink
             to={'/technology'}
             activeclassname='active'
+            onClick={closeMenu}
             className='nav-link uppercase font-normal desktop:py-9 tablet:py-10 block tablet:h-full'>
             <span className='font-bold mr-3 desktop:inline tablet:hidden'>03</span>
             technology

@@ -14,11 +14,11 @@ const Home = () => {
     }, []
   )
   return (
-    <div className="flex desktop:flex-row flex-col justify-around py-32 items-center desktop:items-start text-center">
-      <div className='w-min'>
+    <div className="flex desktop:flex-row flex-col desktop:justify-around pt-32 tablet:h-auto h-full justify-center items-center desktop:items-start text-center ">
+      <div className='tablet:w-min'>
         <p className='desktop:text-heading-5 tablet:text-[20px] text-base font-barlow-condensed text-very-light-grayish-blue desktop:tracking-lg tablet:tracking-[3.375px] tracking-md uppercase'>so, you want to travel to</p>
         <p className='tablet:text-heading-1 text-[80px] font-bellefair uppercase'>space</p>
-        <p className='tablet:text-body-text/8 text-[15px]/7 font-barlow text-very-light-grayish-blue'>
+        <p className='tablet:text-body-text/8 text-[15px]/7 font-barlow text-very-light-grayish-blue tablet:px-0 px-6'>
           Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover
           kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!
         </p>

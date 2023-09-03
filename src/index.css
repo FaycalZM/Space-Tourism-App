@@ -49,3 +49,14 @@ body {
     min-height: 100vh;
     background-color: var(--clr-dark-blue);
 }
+
+@media screen and (max-width : 767px) {
+    html {
+        overflow-y: auto;
+    }
+
+    body {
+        min-height: unset;
+        height: fit-content;
+    }
+}

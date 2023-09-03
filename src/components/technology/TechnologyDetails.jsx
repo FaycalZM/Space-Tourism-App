@@ -19,9 +19,9 @@ const TechnologyDetails = () => {
   return (
 
     <div >
-      <p className='text-base font-barlow-condensed text-very-light-grayish-blue tracking-md'>THE TERMINOLOGY…</p>
-      <p className='desktop:text-heading-3 text-[46px] desktop:my-0 my-4 font-bellefair text-white uppercase'>{currentTechnology ? currentTechnology.name : null} </p>
-      <p className='text-body-text/8 font-barlow text-very-light-grayish-blue desktop:w-auto w-3/4 mx-auto'>
+      <p className='tablet:text-base text-[20px] font-barlow-condensed text-very-light-grayish-blue tablet:tracking-md tracking-sm'>THE TERMINOLOGY…</p>
+      <p className='desktop:text-heading-3 tablet:text-[46px] text-heading-4 desktop:my-0 my-4 font-bellefair text-white uppercase'>{currentTechnology ? currentTechnology.name : null} </p>
+      <p className='tablet:text-body-text/8 text-base/7 font-barlow text-very-light-grayish-blue desktop:w-auto tablet:w-3/4 w-full mx-auto'>
         {currentTechnology ? currentTechnology.description : null}
       </p>
     </div>

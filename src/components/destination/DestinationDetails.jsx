@@ -16,10 +16,10 @@ const DestinationDetails = () => {
   )
   return (
     <>
-      <p className='text-heading-2 font-bellefair uppercase mt-2'>{currentDestination ? currentDestination.name : null} </p>
-      <p className='text-body-text/8 font-barlow text-very-light-grayish-blue desktop:w-auto w-3/4 mx-auto '>{currentDestination ? currentDestination.description : null} </p>
-      <hr className='desktop:mt-6 mt-12 opacity-[0.2] bg-very-light-grayish-blue' />
-      <div className='flex desktop:justify-start justify-center gap-16 mt-4 '>
+      <p className='tablet:text-heading-2 text-heading-3 font-bellefair uppercase tablet:mt-2 mt-4'>{currentDestination ? currentDestination.name : null} </p>
+      <p className='text-body-text/8 font-barlow text-very-light-grayish-blue desktop:w-auto tablet:w-3/4 w-full mx-auto '>{currentDestination ? currentDestination.description : null} </p>
+      <hr className='desktop:mt-6 tablet:mt-12 mt-8 opacity-[0.2] bg-very-light-grayish-blue' />
+      <div className='flex tablet:flex-row flex-col desktop:justify-start justify-center tablet:gap-16 gap-6 mt-4 '>
         <div>
           <p className='text-subheading-2 font-barlow-condensed text-very-light-grayish-blue tracking-sm'>AVG. DISTANCE</p>
           <p className='text-subheading-1 font-bellefair uppercase mt-2'>{currentDestination ? currentDestination.distance : null} </p>
