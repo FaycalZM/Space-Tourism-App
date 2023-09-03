@@ -3,6 +3,7 @@ import { useParams } from 'react-router'
 import data from '../../data/data.json'
 import { useOutletContext } from 'react-router';
 
+
 const { crew } = data;
 
 const CrewDetails = () => {

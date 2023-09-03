@@ -2,15 +2,3 @@
     background: white;
     color: var(--clr-dark-blue);
 }
-
-.tech-infos {
-    animation: fadeInLeft 1.2s .25s ease-in backwards;
-}
-
-.tech-img-landscape {
-    animation: fadeIn 1.2s ease-in;
-}
-
-.tech-img-portrait {
-    animation: fadeInRight 1.2s ease-in;
-}

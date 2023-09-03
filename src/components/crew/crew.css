@@ -1,11 +1,3 @@
 .crew-nav-link.active {
     opacity: 1;
 }
-
-.crew-img {
-    animation: fadeIn 1.2s .5s ease-in backwards;
-}
-
-.crew-infos {
-    animation: fadeInLeft 1.2s ease-in;
-}
